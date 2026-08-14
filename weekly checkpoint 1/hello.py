@@ -3,4 +3,5 @@
 def main():
     print("Hello, World!")
 
-    if_name__
+if __name__=="__main__":
+    main()

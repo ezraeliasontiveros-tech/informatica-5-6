@@ -24,9 +24,9 @@ def main():
 
     print("this is your story:")
     print(f"At dawn the sky turned {color}, and the air felt {adj}. I decided today I will finally {goal}.")
-    
 
-    print(f"At dawn the sky turned {color}, and the air felt {adj}. I decided today I will finally {goal}.")
+
+    print(f"At dawn the sky turned {color}, and the air felt {adj}. I decided today I will finally {goal}.".upper())
 
 
 
