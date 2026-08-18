@@ -3,12 +3,23 @@ def main():
     soles = int(input("What do you have left in soles?:"))
     reais = int(input("What do you have left in reais?:"))
 
-    USD =int(input())
+
+    cu = (0.19*reais)
+    su = (0.30*soles)
+    ru = (0.00032*pesos)
+
+    eu = (cu + su + ru)
+    round(eu,2)
+    print("USD:",eu)
 
 
-    print(0.19*reais)
-    print(0.30*soles)
-    print(0.00032*pesos)
+    cm = (0.0054*pesos)
+    sm = (5.07*soles)
+    rm = (3.27*reais)
+
+    mx = (cm + sm + rm)
+    round(mx,2)
+    print("MXN:",mx)
 
 
 
