@@ -9,11 +9,12 @@ def main():
     p =(5*2) + (w*2)
     print("Perimeter:",p)
 
-    a = (w*2)
+    a =(5*w)
+    print("area:",a)
 
 
-
-
+    d =((5**2)+(w**2)**0.5)
+    print("Diagonal:",d)
 
 
 
