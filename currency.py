@@ -1,7 +1,7 @@
 def main():
-    pesos = int(input("What do you have left in pesos?:"))
-    soles = int(input("What do you have left in soles?:"))
-    reais = int(input("What do you have left in reais?:"))
+    pesos = float(input("What do you have left in pesos?:"))
+    soles = float(input("What do you have left in soles?:"))
+    reais = float(input("What do you have left in reais?:"))
 
 
     cu = (0.19*reais)
