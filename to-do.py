@@ -10,7 +10,9 @@ def main():
             new_task = input("Enter a task:")
             tasks.append(new_task)
         if command == "complete":
-
+            com = input("what task is completed:")
+            tasks.remove(new_task)
+            print(com)
 
         elif command == "close":
             break
