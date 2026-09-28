@@ -1,0 +1,9 @@
+While loop:
+its a loop that it repeated over and over again until the condiotions are met
+
+For loop:
+it look for a range and a value in a list where it will be made by the conditions you make
+
+compare:
+both will be repeated until the conditios are met
+
