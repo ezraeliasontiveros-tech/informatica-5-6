@@ -7,7 +7,7 @@ def welcome():
     print("Welcome to El pato!")
     print("Here's the menu:")
     menu = ["cheeseburger","fries","soda","ice cream","cookie"]
-    for food in range(len(menu)):#range hace una lista
+    for food in range(len(menu)):#range hace una lista y len cuaanta lo qeu hay en la lista
         print(f"{food+1}. {menu[food]}")
 
 def get_item(order):
