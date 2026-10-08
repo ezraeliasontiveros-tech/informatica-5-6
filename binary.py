@@ -3,14 +3,26 @@ def main():
     print("The porpuse of this program is to be able to read binary numbers and interpret them into a decimal number")
     print()
 
+
+ #1011
     binary = int(input("Enter a bynary number:"))
-    binary_to_decimal(binary)
-
-
 def binary_to_decimal(binary):
-    binary = [1,2,4,8,16,32,64]
-    for num in range(len(binary)):
-        print(f"Decimal number:{num*2} + {binary[num]}")
+
+    decimal = 0
+
+    for pocision in range(binary):
+        if decimal == "1":
+            decimal *2**pocision
+        print(f"the binary umber is {binary} the decimal is {decimal}")
+
+    binary_to_decimal()
+
+
+
+
+
+
+
 
 
 
