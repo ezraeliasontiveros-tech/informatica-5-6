@@ -1,0 +1,338 @@
+Aquí tienes la lista de 100 palabras en inglés, divididas también entre palabras cortas (1 a 5 letras) y palabras largas (8 o más letras):
+
+Palabras cortas (1 a 5 letras)
+Sun
+
+Sea
+
+Sky
+
+Star
+
+Moon
+
+Wind
+
+Rain
+
+Snow
+
+Leaf
+
+Tree
+
+Bird
+
+Fish
+
+Book
+
+Song
+
+Wave
+
+Fire
+
+Rock
+
+Sand
+
+Gold
+
+Blue
+
+Hope
+
+Dream
+
+Light
+
+Cloud
+
+River
+
+Ocean
+
+Smile
+
+Heart
+
+Peace
+
+Grace
+
+Flame
+
+Bloom
+
+Frost
+
+Night
+
+Shadow
+
+Pearl
+
+Glass
+
+Clock
+
+Space
+
+Stone
+
+Music
+
+Earth
+
+Amber
+
+Breeze
+
+Spark
+
+Shell
+
+Shore
+
+Woods
+
+Field
+
+Tower
+
+Universe
+
+Labyrinth
+
+Butterfly
+
+Horizon
+
+Starlight
+
+Twilight
+
+Lightning
+
+Sunshine
+
+Galaxy
+
+Constellation
+
+Architecture
+
+Fireworks
+
+Melancholy
+
+Imagination
+
+Curiosity
+
+Enthusiasm
+
+Creativity
+
+Transparency
+
+Spontaneous
+
+Extraordinary
+
+Biodiversity
+
+Kaleidoscope
+
+Sustainability
+
+Discovery
+
+Transformation
+
+Perseverance
+
+Generosity
+
+Kindness
+
+Hospitality
+
+Synchronicity
+
+Serenity
+
+Tranquility
+
+Astonishing
+
+Prodigious
+
+Magnificent
+
+Resilience
+
+Underground
+
+Adventure
+
+Whispering
+
+Sunset
+
+Ecosystem
+
+Spectacular
+
+Harmonious
+
+Unforgettable
+
+Reflection
+
+Masterpiece
+
+Wonderfulness
+
+Connection
+
+Inspiration
+
+Wilderness
+
+
+
+import random
+
+def jugar_ahorcado():
+    # Lista de palabras para adivinar
+    palabras = [
+        "python", "programacion", "computadora", "desarrollo",
+        "algoritmo", "variable", "funcion", "interactivo", "teclado"
+    ]
+
+    # Seleccionar una palabra al azar
+    palabra_secreta = random.choice(palabras)
+    letras_adivinadas = []
+    intentos_fallidos = 0
+    max_intentos = 6
+
+    # Dibujos del ahorcado según los errores (de 0 a 6)
+    ahorcado_arte = [
+        """
+           ------
+           |    |
+                |
+                |
+                |
+                |
+        =========
+        """,
+        """
+           ------
+           |    |
+           O    |
+                |
+                |
+                |
+        =========
+        """,
+        """
+           ------
+           |    |
+           O    |
+           |    |
+                |
+                |
+        =========
+        """,
+        """
+           ------
+           |    |
+           O    |
+          /|    |
+                |
+                |
+        =========
+        """,
+        """
+           ------
+           |    |
+           O    |
+          /|\\   |
+                |
+                |
+        =========
+        """,
+        """
+           ------
+           |    |
+           O    |
+          /|\\   |
+          /     |
+                |
+        =========
+        """,
+        """
+           ------
+           |    |
+           O    |
+          /|\\   |
+          / \\   |
+                |
+        =========
+        """
+    ]
+
+    print("¡Bienvenido al juego del Ahorcado!")
+
+    while intentos_fallidos < max_intentos:
+        print(ahorcado_arte[intentos_fallidos])
+
+        # Mostrar palabra oculta (ej. _ y t _ o n)
+        tablero_actual = ""
+        for letra in palabra_secreta:
+            if letra in letras_adivinadas:
+                tablero_actual += letra + " "
+            else:
+                tablero_actual += "_ "
+
+        print(f"\nPalabra: {tablero_actual.strip()}")
+        print(f"Letras usadas: {', '.join(sorted(letras_adivinadas))}")
+
+        # Verificar si el jugador ya ganó
+        if "_" not in tablero_actual:
+            print(f"\n¡Felicidades! Adivinaste la palabra: {palabra_secreta}")
+            break
+
+        # Pedir una letra al usuario
+        letra_usuario = input("\nIngresa una letra: ").lower()
+
+        # Validar la entrada
+        if len(letra_usuario) != valentia := 1 or not letra_usuario.isalpha():
+            print("Por favor, ingresa solo una letra válida.")
+            continue
+
+        if letra_usuario in letras_adivinadas:
+            print("Ya habías intentado con esa letra. Prueba con otra.")
+            continue
+
+        letras_adivinadas.append(letra_usuario)
+
+        # Comprobar si la letra está en la palabra
+        if letra_usuario in palabra_secreta:
+            print(f"¡Bien hecho! La letra '{letra_usuario}' está en la palabra.")
+        else:
+            print(f"Lo siento, la letra '{letra_usuario}' no está.")
+            intentos_fallidos += 1
+
+    # Si se acaban los intentos
+    if intentos_fallidos == max_intentos:
+        print(ahorcado_arte[max_intentos])
+        print(f"\n¡Te has quedado sin intentos! Game Over.")
+        print(f"La palabra secreta era: {palabra_secreta}")
+
+# Ejecutar el juego
+if __name__ == "__main__":
+    jugar_ahorcado()
